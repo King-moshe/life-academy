@@ -1,0 +1,68 @@
+.banner {
+  --bg-color: white;
+  background-image: url("https://ideogram.ai/assets/progressive-image/balanced/response/4XTBC9_mTaCNSo26bWDF5g");
+  background-size: cover;
+  border-top-right-radius: 20px 20px;
+  border-top-left-radius: 20px 20px;
+  height: 140px;
+  width: 330px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+
+  figure {
+    margin: 0;
+    background-color: var(--bg-color);
+    border-top: 5px solid var(--bg-color);
+    border-top-right-radius: 40px 40px;
+    border-top-left-radius: 40px 40px;
+    text-align: center;
+    width: 85px;
+    height: 55px;
+
+    img {
+      display: inline-block;
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      border: 5px solid var(--bg-color);
+      background-image: url("https://dashboard.msbit.co.il/img/tmp/loader.svg");
+      background-size: contain;
+    }
+  }
+
+  .rc,
+  .lc {
+    width: 50px;
+    height: 50px;
+    overflow: hidden;
+    position: relative;
+    transform: scale(0.25);
+    bottom: -20px;
+    left: -20px;
+    background-color: transparent;
+
+    &:before {
+      content: "";
+      display: block;
+      width: 300%;
+      height: 300%;
+      position: absolute;
+      border-radius: 50%;
+      bottom: 0;
+      left: 0;
+      box-shadow: -50px 50px 0 0 var(--bg-color);
+    }
+  }
+
+  .lc {
+    left: unset;
+    right: -20px;
+
+    &:before {
+      left: unset;
+      right: 0;
+      box-shadow: 50px 50px 0 0 var(--bg-color);
+    }
+  }
+}

@@ -1,10 +1,8 @@
 import React from "react";
 import AcademyCard from "./AcademyCard";
-import sportImg from '../design/images/Rectangle 12.png';
-import flowerImg from '../design/images/flowers.png';
-import yogaImg from '../design/images/yoga.png';
-
-
+import sportImg from "../design/images/spoeL.png";
+import flowerImg from "../design/images/Ellipse 5.png";
+import yogaImg from "../design/images/Ellipse 5 (1).png";
 
 const academiesData = [
   {
@@ -25,11 +23,12 @@ const academiesData = [
     studentCount: 1125,
     classCount: 14,
   },
+  
 ];
 
 export default function MyAcademies() {
   return (
-    <div className="w-full mt-8 flex justify-center">
+    <div className="w-full mt-8 flex justify-center overflow-x-auto min-h-[400px]">
       <div className="w-[70%]">
         <div className="w-full mb-6 flex justify-between items-center">
           <h2 className="font-bold text-2xl">My Academies</h2>
@@ -42,7 +41,7 @@ export default function MyAcademies() {
             </button>
           </div>
         </div>
-        <div className="flex justify-start gap-6">
+        <div className="relative justify-start flex overflow-x-auto gap-6 py-2">
           {academiesData.map((academy, index) => (
             <AcademyCard key={index} {...academy} />
           ))}

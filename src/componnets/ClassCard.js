@@ -3,12 +3,12 @@ import "../design/css/card.css";
 import bookI from "../design/images/bookI.png";
 import studentI from "../design/images/studyI.png";
 
-export default function AcademyCard({
-  imageUrl,
-  title,
-  studentCount,
-  classCount,
-}) {
+export default function ClassCard({
+    imageUrl,
+    title,
+    studentCount,
+    classCount,
+  }) {
   return (
     <div className="w-[330px] h-[365px] border rounded-[20px] shadow-md">
       <div class="banner">
