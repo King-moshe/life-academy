@@ -5,11 +5,16 @@ import hoIcon from "../design/images/Group 189 (1).png";
 import acadicon from "../design/images/Academyicon.png";
 
 export default function Header() {
-  const [isOpen, setIsOpen] = useState();
+  const [isOpen, setIsOpen] = useState(false);
   const [activeTab, setActiveTab] = useState("home"); // Track the selected tab
 
   const toggleModal = () => {
     setIsOpen(!isOpen);
+  };
+
+  const handleTabClick = (tab) => {
+    setActiveTab(tab);
+    setIsOpen(false); // Close the modal after clicking a tab
   };
 
   return (
@@ -28,7 +33,7 @@ export default function Header() {
               className={`flex items-center mr-5 cursor-pointer ${
                 activeTab === "home" ? "text-black border-b-4 border-blue-500" : "text-gray-400"
               }`}
-              onClick={() => setActiveTab("home")}
+              onClick={() => handleTabClick("home")}
             >
               <img src={hoIcon} alt="icon" className="mr-2" />
               Home
@@ -37,7 +42,7 @@ export default function Header() {
               className={`flex items-center cursor-pointer ${
                 activeTab === "academies" ? "text-black border-b-4 border-blue-500" : "text-gray-400"
               }`}
-              onClick={() => setActiveTab("academies")}
+              onClick={() => handleTabClick("academies")}
             >
               <img src={acadicon} alt="icon" className="mr-2" />
               My Academies
@@ -102,8 +107,22 @@ export default function Header() {
             </div>
             {/* Links */}
             <ul className="space-y-4 text-center">
-              <li className="cursor-pointer">Home</li>
-              <li className="cursor-pointer">My Academies</li>
+              <li
+                className={`cursor-pointer ${
+                  activeTab === "home" ? "text-black font-bold" : "text-gray-400"
+                }`}
+                onClick={() => handleTabClick("home")}
+              >
+                Home
+              </li>
+              <li
+                className={`cursor-pointer ${
+                  activeTab === "academies" ? "text-black font-bold" : "text-gray-400"
+                }`}
+                onClick={() => handleTabClick("academies")}
+              >
+                My Academies
+              </li>
             </ul>
           </div>
         </div>
