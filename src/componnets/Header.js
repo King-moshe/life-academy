@@ -6,7 +6,7 @@ import acadicon from "../design/images/Academyicon.png";
 
 export default function Header() {
   return (
-    <div className="w-full bg-[#FFFFFF] h-[56px] flex justify-center sticky top-0">
+    <div className="z-50 w-full bg-[#FFFFFF] h-[56px] flex justify-center sticky top-0">
       <div className="h-[40px] w-[70%] flex justify-between">
         <div className="flex items-center w-1/3">
           <img src={logoImg} alt="Logo" />
