@@ -30,8 +30,8 @@ export default function MyAcademies() {
   return (
     <div className="w-full mt-8 flex justify-center overflow-x-auto min-h-[400px]">
       <div className="w-[70%]">
-        <div className="w-full mb-6 flex justify-between items-center">
-          <h2 className="font-bold text-2xl">My Academies</h2>
+        <div className="w-full mb-6 md:flex justify-between items-center">
+          <h2 className="font-bold text-2xl mb-1.5 md:mb-0">My Academies</h2>
           <div className="flex">
             <button className="rounded-2xl border bg-gradient-to-tr from-[#C3F6B6] via-[#50A7F4] to-[#5664C4] mr-3 text-white px-4 py-2 font-semibold">
               Have an Academy Code?
