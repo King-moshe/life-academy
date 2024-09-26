@@ -23,7 +23,7 @@ const academiesData = [
 export default function RecomendAc() {
     return (
         <div className="w-full mt-8 flex justify-center overflow-x-auto min-h-[400px]">
-          <div className="w-[70%]">
+          <div className="md:w-[70%] w-[90%]">
             <div className="w-full mb-6 flex justify-between items-center">
               <h2 className="font-bold text-2xl">Recommended Academies</h2>
             </div>

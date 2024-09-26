@@ -8,7 +8,7 @@ export default function CardOpt2({ imageUrl, title, text }) {
   };
 
   return (
-    <div className="w-[330px] h-[365px] border rounded-[20px] shadow-md">
+    <div className="w-[330px] h-[365px] border rounded-[20px] shadow-md p-2">
       <div className="banner-2">
         <div className="lc-2"></div>
         <figure>
